@@ -12,7 +12,7 @@ stark = House.create(name: "House Stark",slogan: "Winter is Coming",img_url: "ht
 targaryen = House.create(name: "House Targaryen",slogan: "Fire and Blood",img_url: "https://s-media-cache-ak0.pinimg.com/736x/24/05/33/240533ed4d87e19452850c834fbb4a2b.jpg")
 lannister = House.create(name: "House Lannister",slogan: "Hear Me Roar",img_url: "https://s-media-cache-ak0.pinimg.com/736x/f0/2c/af/f02caf3461a255115834a4066e88fffb.jpg")
 martell = House.create(name: "House Martell",slogan: "Unbowed, Unbent, Unbroken",img_url: "https://s-media-cache-ak0.pinimg.com/564x/01/47/2d/01472d21ff4911fa922a9ae37054c802.jpg")
-nights = House.create(name: "Night's Watch",slogan: "Sword in the Darkness",img_url: "http://i.imgur.com/Q72ddBp.jpg")
+nights = House.create(name: "Night's Watch",slogan: "Sword in the Darkness",img_url: "https://s-media-cache-ak0.pinimg.com/564x/8e/d9/a5/8ed9a5ffdfdc78010230c906fc3e39e4.jpg")
 
 stark.characters.create(name: "Lady Catelyn Stark", quote: "If you lose your father dies, your sisters die, we die.")
 stark.characters.create(name: "Eddard Stark", quote: "The man that passes the sentences should swing the sword")

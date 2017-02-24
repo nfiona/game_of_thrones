@@ -1,0 +1,16 @@
+<h1>Edit House</h1>
+
+<%= form_for @house do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :slogan %>
+  <%= f.text_field :slogan %>
+
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url %>
+
+  <%= f.submit "Update" %>
+<% end %>
+
+<%= link_to "Game Over", @house, method: :delete %>
