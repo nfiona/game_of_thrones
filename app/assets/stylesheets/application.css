@@ -19,7 +19,27 @@
   src: font-url('game_of_thrones.ttf') format("truetype");
 }
 
-/*body {
-  background-color: black;
+body {
+  background-image: url(https://il9.picdn.net/shutterstock/videos/6522632/thumb/1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   color: white;
-}*/
+  text-align: center;
+}
+
+.main_image {
+  margin: 0 auto;
+}
+
+.house {
+  display: inline-block;
+   margin-top: 200px;
+
+}
+
+
+ .house img{
+  height: 200px;
+  width: 100px;
+}
