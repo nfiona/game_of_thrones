@@ -1,0 +1,13 @@
+<h2>Edit Character</h2>
+
+<%= form_for [@house,@character] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :quote %>
+  <%= f.text_field :quote %>
+
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Kill this Character",[@house,@character], method: :delete %>
