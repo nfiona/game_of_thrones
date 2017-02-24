@@ -27,3 +27,160 @@ Migrating to CreateCharacters (20170224145941)
   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2595453713315380680)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mHouse Load (61.5ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mHouse Load (1.1ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mHouse Load (1.1ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mCharacter Load (44.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (24.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mCharacter Load (1.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  [1m[36mHouse Load (1.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (78.4ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House Stark"], ["slogan", "Winter is Coming"], ["img_url", "https://s-media-cache-ak0.pinimg.com/736x/eb/a5/eb/eba5ebb35fd71715968bc793e3e8b2b9.jpg"]]
+  [1m[35m (35.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House Targaryen"], ["slogan", "Fire and Blood"], ["img_url", "https://s-media-cache-ak0.pinimg.com/736x/24/05/33/240533ed4d87e19452850c834fbb4a2b.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House Lannister"], ["slogan", "Hear Me Roar"], ["img_url", "https://s-media-cache-ak0.pinimg.com/736x/f0/2c/af/f02caf3461a255115834a4066e88fffb.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House Martell"], ["slogan", "Unbowed, Unbent, Unbroken"], ["img_url", "https://s-media-cache-ak0.pinimg.com/564x/01/47/2d/01472d21ff4911fa922a9ae37054c802.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Night's Watch"], ["slogan", "Sword in the Darkness"], ["img_url", "http://i.imgur.com/Q72ddBp.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mCharacter Load (1.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  [1m[36mHouse Load (0.9ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."house_id" = $1[0m  [["house_id", 1]]
+  [1m[35mSQL (54.9ms)[0m  [1m[31mDELETE FROM "houses" WHERE "houses"."id" = $1[0m  [["id", 1]]
+  [1m[35m (24.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."house_id" = $1[0m  [["house_id", 2]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "houses" WHERE "houses"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."house_id" = $1[0m  [["house_id", 3]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "houses" WHERE "houses"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."house_id" = $1[0m  [["house_id", 4]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "houses" WHERE "houses"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."house_id" = $1[0m  [["house_id", 5]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "houses" WHERE "houses"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (27.6ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House Stark"], ["slogan", "Winter is Coming"], ["img_url", "https://s-media-cache-ak0.pinimg.com/736x/eb/a5/eb/eba5ebb35fd71715968bc793e3e8b2b9.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House Targaryen"], ["slogan", "Fire and Blood"], ["img_url", "https://s-media-cache-ak0.pinimg.com/736x/24/05/33/240533ed4d87e19452850c834fbb4a2b.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House Lannister"], ["slogan", "Hear Me Roar"], ["img_url", "https://s-media-cache-ak0.pinimg.com/736x/f0/2c/af/f02caf3461a255115834a4066e88fffb.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House Martell"], ["slogan", "Unbowed, Unbent, Unbroken"], ["img_url", "https://s-media-cache-ak0.pinimg.com/564x/01/47/2d/01472d21ff4911fa922a9ae37054c802.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Night's Watch"], ["slogan", "Sword in the Darkness"], ["img_url", "http://i.imgur.com/Q72ddBp.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "quote", "house_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lady Catelyn Stark"], ["quote", "If you lose your father dies, your sisters die, we die."], ["house_id", 6]]
+  [1m[35m (41.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mCharacter Load (1.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = $1[0m  [["id", 1]]
+  [1m[35m (24.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mHouse Load (1.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."house_id" = $1[0m  [["house_id", 6]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "houses" WHERE "houses"."id" = $1[0m  [["id", 6]]
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."house_id" = $1[0m  [["house_id", 7]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "houses" WHERE "houses"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."house_id" = $1[0m  [["house_id", 8]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "houses" WHERE "houses"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."house_id" = $1[0m  [["house_id", 9]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "houses" WHERE "houses"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."house_id" = $1[0m  [["house_id", 10]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "houses" WHERE "houses"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (29.0ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House Stark"], ["slogan", "Winter is Coming"], ["img_url", "https://s-media-cache-ak0.pinimg.com/736x/eb/a5/eb/eba5ebb35fd71715968bc793e3e8b2b9.jpg"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House Targaryen"], ["slogan", "Fire and Blood"], ["img_url", "https://s-media-cache-ak0.pinimg.com/736x/24/05/33/240533ed4d87e19452850c834fbb4a2b.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House Lannister"], ["slogan", "Hear Me Roar"], ["img_url", "https://s-media-cache-ak0.pinimg.com/736x/f0/2c/af/f02caf3461a255115834a4066e88fffb.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House Martell"], ["slogan", "Unbowed, Unbent, Unbroken"], ["img_url", "https://s-media-cache-ak0.pinimg.com/564x/01/47/2d/01472d21ff4911fa922a9ae37054c802.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Night's Watch"], ["slogan", "Sword in the Darkness"], ["img_url", "http://i.imgur.com/Q72ddBp.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "quote", "house_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lady Catelyn Stark"], ["quote", "If you lose your father dies, your sisters die, we die."], ["house_id", 11]]
+  [1m[35m (40.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mCharacter Load (0.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = $1[0m  [["id", 2]]
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mHouse Load (0.9ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."house_id" = $1[0m  [["house_id", 11]]
+  [1m[35mSQL (25.6ms)[0m  [1m[31mDELETE FROM "houses" WHERE "houses"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."house_id" = $1[0m  [["house_id", 12]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "houses" WHERE "houses"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."house_id" = $1[0m  [["house_id", 13]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "houses" WHERE "houses"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."house_id" = $1[0m  [["house_id", 14]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "houses" WHERE "houses"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."house_id" = $1[0m  [["house_id", 15]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "houses" WHERE "houses"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House Stark"], ["slogan", "Winter is Coming"], ["img_url", "https://s-media-cache-ak0.pinimg.com/736x/eb/a5/eb/eba5ebb35fd71715968bc793e3e8b2b9.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House Targaryen"], ["slogan", "Fire and Blood"], ["img_url", "https://s-media-cache-ak0.pinimg.com/736x/24/05/33/240533ed4d87e19452850c834fbb4a2b.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House Lannister"], ["slogan", "Hear Me Roar"], ["img_url", "https://s-media-cache-ak0.pinimg.com/736x/f0/2c/af/f02caf3461a255115834a4066e88fffb.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House Martell"], ["slogan", "Unbowed, Unbent, Unbroken"], ["img_url", "https://s-media-cache-ak0.pinimg.com/564x/01/47/2d/01472d21ff4911fa922a9ae37054c802.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "houses" ("name", "slogan", "img_url") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Night's Watch"], ["slogan", "Sword in the Darkness"], ["img_url", "http://i.imgur.com/Q72ddBp.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "quote", "house_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lady Catelyn Stark"], ["quote", "If you lose your father dies, your sisters die, we die."], ["house_id", 16]]
+  [1m[35m (41.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "quote", "house_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Eddard Stark"], ["quote", "The man that passes the sentences should swing the sword"], ["house_id", 16]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mHouse Load (0.9ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
