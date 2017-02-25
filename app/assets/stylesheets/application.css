@@ -19,27 +19,66 @@
   src: font-url('game_of_thrones.ttf') format("truetype");
 }
 
+ h3 a {
+  text-decoration: none !important;
+  color: #93969d;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+h2 a {
+ text-decoration: none !important;
+ color: #8c2424;
+ font-family: 'Cinzel Decorative', cursive;
+}
+
+h4 a {
+ text-decoration: none !important;
+ color: #fff;
+ font-family: 'Cinzel Decorative', cursive;
+}
+
+h1, h2{
+  font-family: 'Cinzel Decorative', cursive;
+  color: #8c2424;
+}
+
+h3 {
+  font-family: 'Cinzel Decorative', cursive;
+  color: white;
+}
+
 body {
-  background-image: url(https://il9.picdn.net/shutterstock/videos/6522632/thumb/1.jpg);
+  background-image: url(https://i.ytimg.com/vi/xYc8we0yRdE/maxresdefault.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: white;
+  font-family: "thrones";
   text-align: center;
+  margin: 0 40px 0 40px;
 }
 
 .main_image {
+  width: 600px;
+  height: 300px;
   margin: 0 auto;
+  background-image: url(http://lequarantedeux.fr/wp-content/uploads/2016/04/game-of-thrones-season-6-poster-teaser1.jpg);
+  border-style: hidden;
+  border-color: black;
+  border-radius: 100px;
+  box-shadow: -2px 1px 35px 20px #041215;
 }
 
 .house {
   display: inline-block;
-   margin-top: 200px;
-
+  justify-content: space-between;
+   padding: 20px;
 }
 
-
  .house img{
-  height: 200px;
-  width: 100px;
+  height: 290px;
+  width: 180px;
+  border-color: black;
+  border-radius: 100px;
+  box-shadow: -2px 1px 35px 20px #2f3334;
 }
