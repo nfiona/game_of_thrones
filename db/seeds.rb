@@ -29,3 +29,13 @@ lannister.characters.create(name: "Tywin Lannister", quote: "It's the family nam
 lannister.characters.create(name: "Ser Jaime Lannister", quote: "",img_url: "")
 lannister.characters.create(name: "Cercei Lannister", quote: "",img_url: "")
 lannister.characters.create(name: "Tyrion Lannister", quote: "",img_url: "")
+
+martell.characters.create(name: "Prince Doran Nymeros Martell", quote: "",img_url: "")
+martell.characters.create(name: "Princess Elia Martell", quote: "",img_url: "")
+martell.characters.create(name: "Prince Oberyn Nymeros Martell", quote: "",img_url: "")
+martell.characters.create(name: "Ellaria Sand", quote: "",img_url: "")
+
+nights.characters.create(name: "Maester Aemon", quote: "",img_url: "")
+nights.characters.create(name: "Jon Snow", quote: "",img_url: "")
+nights.characters.create(name: "Benjen Stark", quote: "",img_url: "")
+nights.characters.create(name: "Samwell Tarly", quote: "",img_url: "")
