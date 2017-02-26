@@ -4,10 +4,15 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
 
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url %>
+
   <%= f.label :quote %>
-  <%= f.text_field :quote %>
+  <%= f.text_area :quote, size: "20x5" %>
 
-  <%= f.submit %>
+  <%= f.submit "Update" %>
 <% end %>
+<br>
+<br>
 
-<%= link_to "Kill this Character",[@house,@character], method: :delete %>
+<h2> <%= link_to "Kill this Character",[@house,@character], method: :delete %> </h2>

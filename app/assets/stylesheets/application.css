@@ -40,11 +40,18 @@ h4 a {
 h1, h2{
   font-family: 'Cinzel Decorative', cursive;
   color: #8c2424;
+  text-shadow: #3f3b3b;
 }
 
 h3 {
   font-family: 'Cinzel Decorative', cursive;
   color: white;
+  text-shadow: #3f3b3b;
+}
+
+
+a:hover {
+   text-shadow: 2px 2px #961b1b;
 }
 
 body {
@@ -67,6 +74,19 @@ body {
   border-color: black;
   border-radius: 100px;
   box-shadow: -2px 1px 35px 20px #041215;
+  animation-name: smoke;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes smoke {
+   0%   {display: none}
+   5%  {opacity: .05}
+   10%  {opacity: .10}
+   25%  {opacity: .25}
+   50%  {opacity: .50}
+   75%  {opacity: .75}
+   100% {opacity: 1}
 }
 
 .house {
@@ -81,4 +101,13 @@ body {
   border-color: black;
   border-radius: 100px;
   box-shadow: -2px 1px 35px 20px #2f3334;
+}
+
+.character img {
+  height: 290px;
+  width: 180px;
+  border-color: black;
+  border-radius: 100px;
+  box-shadow: -2px 1px 35px 20px #2f3334;
+
 }

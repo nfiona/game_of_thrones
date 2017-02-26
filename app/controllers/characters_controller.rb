@@ -32,7 +32,7 @@ class CharactersController < ApplicationController
     @character = @house.characters.find(params[:id])
     @character.update(character_params)
 
-    redirect_to house_path
+    redirect_to house_character_path(@house,@character)
   end
 
   def destroy
@@ -46,7 +46,7 @@ class CharactersController < ApplicationController
 
   private
   def character_params
-    params.require(:character).permit(:name, :quote)
+    params.require(:character).permit(:name, :quote, :img_url)
   end
 
 end
