@@ -11808,3 +11808,49 @@ Processing by HousesController#index as HTML
 Completed 200 OK in 51ms (Views: 46.1ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for ::1 at 2017-02-27 12:17:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (57.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (68.7ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (243.5ms)
+Completed 200 OK in 1045ms (Views: 755.5ms | ActiveRecord: 208.6ms)
+
+
+Started GET "/houses/35" for ::1 at 2017-02-27 12:17:50 -0500
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mHouse Load (16.8ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mCharacter Load (52.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."house_id" = $1[0m  [["house_id", 35]]
+  Rendered houses/show.html.erb within layouts/application (185.9ms)
+Completed 200 OK in 325ms (Views: 148.5ms | ActiveRecord: 83.2ms)
+
+
+Started GET "/houses" for ::1 at 2017-04-18 13:46:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (37.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (79.7ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (200.2ms)
+Completed 200 OK in 1585ms (Views: 1218.1ms | ActiveRecord: 163.4ms)
+
+
+Started GET "/houses/38" for ::1 at 2017-04-18 13:46:46 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mHouse Load (28.1ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  [1m[36mCharacter Load (29.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."house_id" = $1[0m  [["house_id", 38]]
+  Rendered houses/show.html.erb within layouts/application (175.0ms)
+Completed 200 OK in 441ms (Views: 265.1ms | ActiveRecord: 80.2ms)
+
+
+Started GET "/houses" for ::1 at 2017-04-18 13:46:54 -0400
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (3.9ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 147ms (Views: 110.0ms | ActiveRecord: 3.9ms)
+
+
